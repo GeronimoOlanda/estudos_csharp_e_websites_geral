@@ -3,9 +3,30 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consoles", "Consoles", "{E5A6D065-3299-4EF2-9C86-E5CDDFF9F868}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apis", "Apis", "{407D4770-EA27-4B92-9A6F-91DB29CDE214}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebSites", "WebSites", "{5484F6FA-6E9A-4811-8161-6A2A83EFAB6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpAdvanced", "CSharpAdvanced\CSharpAdvanced.csproj", "{512A46D3-3BD5-4ECD-874B-F69B5F0E0768}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{512A46D3-3BD5-4ECD-874B-F69B5F0E0768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{512A46D3-3BD5-4ECD-874B-F69B5F0E0768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{512A46D3-3BD5-4ECD-874B-F69B5F0E0768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{512A46D3-3BD5-4ECD-874B-F69B5F0E0768}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{512A46D3-3BD5-4ECD-874B-F69B5F0E0768} = {E5A6D065-3299-4EF2-9C86-E5CDDFF9F868}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7EF4316B-4FEE-493A-832C-DD48F20E2257}
