@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpAdvanced.Fundamentos
 {
-    public class fundamentos
+    public class Fundamentos
     {
         // exibe a media dos valores
         public double CalculoMedia(double valor1, double valor2)
@@ -26,5 +26,7 @@ namespace CSharpAdvanced.Fundamentos
         {
             return  erro;
         }
+
+       
     }
 }
