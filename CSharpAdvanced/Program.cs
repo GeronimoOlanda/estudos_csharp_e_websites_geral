@@ -1,18 +1,13 @@
 ﻿using CSharpAdvanced.Models;
 
-PessoaModel Pessoa = new PessoaModel();
+string NomeProduto = "PC Gamer";
+double Valor = 1.232;
+int QTDProduto = 32;
 
-Pessoa.Nome = "Geronimo";
-Pessoa.Idade = 24;
+ProdutoModel produto = new ProdutoModel(NomeProduto,Valor, QTDProduto);
 
+ProdutoModel produto2 = new ProdutoModel("Teste", 21.22);
 
-PessoaModel p1 = new PessoaModel()
-{
-    Id = "1",
-    Nome = "Jesus",
-
-
-};
-
-    Console.WriteLine($"Indice na Lista: {p1.Id}.\nNome: {p1.Nome}.");
-
+Console.WriteLine($"Nome       = {produto.Nome}.");
+Console.WriteLine($"Preço      = {produto.Preco}.");
+Console.WriteLine($"Quantidade = {produto.Quantidade} .");
