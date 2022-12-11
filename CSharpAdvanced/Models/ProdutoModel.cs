@@ -25,9 +25,9 @@ namespace CSharpAdvanced.Models
         /// <returns></returns>
        public ProdutoModel(string nome, double preco)
         {
-            Nome = nome;
-            Preco = preco;
-            Quantidade = 0;
+            this.Nome = nome;
+            this.Preco = preco;
+            this.Quantidade = 0;
         }
         public double ValotTotalEmEstoque()
         {
