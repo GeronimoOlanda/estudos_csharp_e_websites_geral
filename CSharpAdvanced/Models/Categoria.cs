@@ -17,5 +17,13 @@ namespace CSharpAdvanced.Models
                 return DateTime.Now;
             }
         }
+
+        public string ObterTitulos
+        {
+            get
+            {
+                return Titullo + "U+0020-U+0020" + Descricao;
+            }
+        }
     }
 }
