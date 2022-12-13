@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Geronimo.Domain.Repository\GeroOlanda.Domain.Repository.csproj" />
+    <ProjectReference Include="..\GeroOlanda.Domain.Services\GeroOlanda.Domain.Services.csproj" />
+  </ItemGroup>
+
 </Project>
