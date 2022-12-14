@@ -16,11 +16,7 @@ namespace GeroOlanda.Domain.Services.Impl
 
         public async Task<IList<Home>> Cadastrar(string Descricao)
         {
-            var cadastro = new Home
-            {
-                Descricao = Descricao
-            };
-           var cadastrando = _homeRepository.Cadastrar(cadastro);
+           var cadastrando = await _homeRepository.Cadastrar(Descricao);
 
             return cadastrando;
         }
