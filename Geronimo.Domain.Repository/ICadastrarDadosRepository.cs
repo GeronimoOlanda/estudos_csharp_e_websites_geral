@@ -8,11 +8,8 @@ using System.Threading.Tasks;
 
 namespace GeroOlanda.Domain.Repository
 {
-    public interface IHomeRepository
+    public interface ICadastrarDadosRepository
     {
-        Task<IList<HomeDTO>> ConsultarDadosPorIdUsuario(decimal IdUsuario);
-        void SaveChanges();
         Task<IList<Home>> Cadastrar(string Descricao);
-
     }
 }
