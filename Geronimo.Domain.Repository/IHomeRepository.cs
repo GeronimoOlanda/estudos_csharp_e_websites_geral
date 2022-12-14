@@ -14,5 +14,7 @@ namespace GeroOlanda.Domain.Repository
         void SaveChanges();
         Task<IList<Home>> Cadastrar(string Descricao);
 
+        public string CadastrarUma(string Descricao);
+
     }
 }

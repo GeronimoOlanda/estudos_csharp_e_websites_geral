@@ -12,13 +12,35 @@ namespace GeroOlanda.Domain.Repository.Impl
     public class HomeRepository : IHomeRepository
     {
         protected GeroOlandaDbContext _context;
-        public HomeRepository(GeroOlandaDbContext context)  {
+
+        public HomeRepository(GeroOlandaDbContext context)
+        {
             _context = context;
+        }
+        public HomeRepository()
+        {
+
         }
 
         public Task<IList<Home>> Cadastrar(string Descricao)
         {
             throw new NotImplementedException();
+        }
+
+        public string CadastrarUma(string Descricao)
+        {
+            var mennsagem = "";
+            if (Descricao == "teste")
+            {
+                mennsagem = "Bateu na service";
+            }
+            else
+            {
+                mennsagem = "nao bateu na service";
+            }
+            //return cadastrando;
+
+            return mennsagem;
         }
 
         public Task<IList<HomeDTO>> ConsultarDadosPorIdUsuario(decimal IdUsuario)

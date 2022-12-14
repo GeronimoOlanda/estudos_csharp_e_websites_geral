@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace GeroOlanda.Domain.Services
 {
-    public interface IHomeService 
+    public interface IHomeService
     {
         Task<IList<HomeDTO>> ConsultarDadosPorIdUsuario(decimal IdUsuario);
-        Task<IList<Home>> Cadastrar(string Descricao);
+
+        public string CadastrarUma(string Descricao);
+
     }
 }
