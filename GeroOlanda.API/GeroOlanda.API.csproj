@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GeroOlanda.Domain.Repository.Impl\GeroOlanda.Domain.Repository.Impl.csproj" />
     <ProjectReference Include="..\GeroOlanda.Domain.Services\GeroOlanda.Domain.Services.csproj" />
   </ItemGroup>
 
