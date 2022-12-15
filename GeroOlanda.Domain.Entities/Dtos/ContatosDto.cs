@@ -8,7 +8,6 @@ namespace GeroOlanda.Domain.Entities.Dtos
 {
     public class ContatosDto
     {
-       public string ContatosId { get; set; }
        public string Telefone { get; set; }
     }
 }
