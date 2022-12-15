@@ -29,9 +29,9 @@ namespace GeroOlanda.API.Controllers
 
         [HttpPost]
         [SwaggerOperation("Cadastrar Descricao")]
-        public IActionResult GravarDadosDescricao(string Descricao)
+        public async Task<IActionResult> GravarDadosDescricao(string descricao)
         {
-            var retorno =  _homeService.CadastrarUma(Descricao);
+            var retorno =  _homeService.CadastrarUma(descricao);
            
             return Ok(retorno);
         }
