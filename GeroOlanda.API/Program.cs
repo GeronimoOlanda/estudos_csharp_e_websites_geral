@@ -1,11 +1,21 @@
 using GeroOlanda.API.AutoMapper;
 using GeroOlanda.Domain.Repository;
 using GeroOlanda.Domain.Repository.Impl;
+using GeroOlanda.Domain.Repository.Impl.GeroDbContext;
 using GeroOlanda.Domain.Services;
 using GeroOlanda.Domain.Services.Impl;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
+////mapeando a repository
+//builder.Services.Add(new ServiceDescriptor(typeof(IHomeRepository), new HomeRepository()));
 
+//mapeando a services
+builder.Services.Add(new ServiceDescriptor(typeof(IHomeService), new HomeService()));
+builder.Services.AddScoped<IHomeRepository, HomeRepository>();
+builder.Services.AddScoped<IHomeService, HomeService>();
+builder.Services.AddDbContext<GeroOlandaDbContext>();
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -17,11 +27,9 @@ builder.Services.AddAutoMapper(config => {
     config.AddProfile<GeroOlandaProfile>();
 
 });
-//mapeando a services
-builder.Services.Add(new ServiceDescriptor(typeof(IHomeService), new HomeService()));
 
-//mapeando a repository
-builder.Services.Add(new ServiceDescriptor(typeof(IHomeRepository), new HomeRepository()));
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
