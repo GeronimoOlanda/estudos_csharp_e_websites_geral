@@ -15,7 +15,11 @@ builder.Services.AddMvc();
 //mapeando a services/repository
 builder.Services.Add(new ServiceDescriptor(typeof(IHomeService), new HomeService()));
 builder.Services.AddScoped<IHomeRepository, HomeRepository>();
+builder.Services.AddScoped<ILoginUserRepository, LoginUserRepository>();
+
+
 builder.Services.AddScoped<IHomeService, HomeService>();
+builder.Services.AddScoped<ILoginUserService, LoginUserService>();
 
 IConfigurationRoot configuration = new ConfigurationBuilder()
       .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)

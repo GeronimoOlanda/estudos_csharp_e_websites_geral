@@ -18,20 +18,10 @@ namespace GeroOlanda.API.Controllers
             _homeService = homeService;
         }
 
-
-        [HttpGet]
-        [SwaggerOperation("Consulta dados da pagina Home")]
-        public async Task<ActionResult<IList<HomeDTO>>> ConsultarDados(decimal IdUsuario)
-        {
-
-            var response = await _homeService.ConsultarDadosPorIdUsuario(IdUsuario);
-            return Ok(response);
-        }
-
         [HttpPost]
         [SwaggerOperation("Cadastrar Descricao")]
         [SwaggerResponse(200, "", typeof(List<Home>))]
-        public async Task<IActionResult> GravarDadosDescricao(string descricao)
+        public IActionResult GravarDadosDescricao(string descricao)
         {
             var retorno =  _homeService.CadastrarUma(descricao);
            

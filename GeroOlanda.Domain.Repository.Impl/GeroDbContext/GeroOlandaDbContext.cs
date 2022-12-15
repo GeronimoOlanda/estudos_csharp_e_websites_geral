@@ -30,6 +30,7 @@ namespace GeroOlanda.Domain.Repository.Impl.GeroDbContext
 
             //mapeando e aplicando as configurações.
             builder.ApplyConfiguration(new HomeMap());
+            builder.ApplyConfiguration(new LoginUserMap());
             
 
         }
