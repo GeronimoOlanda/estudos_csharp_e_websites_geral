@@ -16,9 +16,10 @@ namespace GeroOlanda.Domain.Repository.Impl.ConfigurationMaps
 
         public void Configure(EntityTypeBuilder<Home> builder)
         {
-            builder.HasKey(x => x.Id); 
+            builder.HasKey(x => x.id_home); 
             builder.ToTable(NomeTabela);
-            builder.Property(e => e.Id)
+
+            builder.Property(e => e.id_home)
                     .HasColumnName(NomeColunaId)
                     .IsRequired();
             builder.HasOne(e => e.Descricao);

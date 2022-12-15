@@ -38,18 +38,6 @@ namespace GeroOlanda.Domain.Repository.Impl
             _context.Add(home);
             _context.SaveChanges();
             return home.Descricao;
-            //var mennsagem = "";
-            //if (descricao == "teste")
-            //{
-            //    mennsagem = "Bateu na service";
-            //}
-            //else
-            //{
-            //    mennsagem = "nao bateu na service";
-            //}
-            ////return cadastrando;
-
-            //return mennsagem;
         }
 
         public Task<IList<HomeDTO>> ConsultarDadosPorIdUsuario(decimal IdUsuario)

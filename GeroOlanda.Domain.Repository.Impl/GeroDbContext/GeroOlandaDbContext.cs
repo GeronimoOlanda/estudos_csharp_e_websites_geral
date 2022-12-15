@@ -20,8 +20,6 @@ namespace GeroOlanda.Domain.Repository.Impl.GeroDbContext
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.EnableSensitiveDataLogging();
-            //optionsBuilder.UseSqlServer(@"Server=.\;Database=Getha;Trusted_Connection=False;", opts => opts.CommandTimeout((int)TimeSpan.FromMinutes(10).TotalSeconds));
-            optionsBuilder.UseSqlServer(@"Server=.\;Database=Getha;Trusted_Connection=True;MultipleActiveResultSets=true");
             base.OnConfiguring(optionsBuilder);
         }
 
@@ -32,7 +30,10 @@ namespace GeroOlanda.Domain.Repository.Impl.GeroDbContext
         }
         public void Configure(EntityTypeBuilder<Home> builder)
         {
-            builder.HasKey(x => x.Id);
+            //primery key
+            builder.HasKey(x => x.id_home);
+
+            //Atributos
             builder.HasOne(e => e.Descricao);
 
 
