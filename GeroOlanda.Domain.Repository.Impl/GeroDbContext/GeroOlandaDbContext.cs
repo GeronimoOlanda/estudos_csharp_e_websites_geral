@@ -25,20 +25,14 @@ namespace GeroOlanda.Domain.Repository.Impl.GeroDbContext
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+           
             base.OnModelCreating(builder);
 
-        }
-        public void Configure(EntityTypeBuilder<Home> builder)
-        {
-            //primery key
-            builder.HasKey(x => x.id_home);
-
-            //Atributos
-            builder.HasOne(e => e.Descricao);
-
+            //mapeando e aplicando as configurações.
+            builder.ApplyConfiguration(new HomeMap());
+            
 
         }
-        //builder.ApplyConfiguration(new HomeMap());
 
     }
 }

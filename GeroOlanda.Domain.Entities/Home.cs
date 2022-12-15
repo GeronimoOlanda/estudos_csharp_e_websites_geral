@@ -10,10 +10,10 @@ namespace GeroOlanda.Domain.Entities
 {
     public class Home 
     {
+
         [Key]
         public int id_home { get; set; }
 
-       
         public string Descricao { get; set; }
     }
 }

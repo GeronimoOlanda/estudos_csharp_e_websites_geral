@@ -24,6 +24,7 @@ IConfigurationRoot configuration = new ConfigurationBuilder()
 
 builder.Services.AddDbContext<GeroOlandaDbContext>(
  options => options.UseSqlServer(configuration.GetConnectionString("SQLServerDBContext"))
+
 );
 
 
