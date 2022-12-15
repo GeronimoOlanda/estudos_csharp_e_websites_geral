@@ -1,4 +1,5 @@
 
+using GeroOlanda.Domain.Entities;
 using GeroOlanda.Domain.Entities.Dtos;
 using GeroOlanda.Domain.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -18,21 +19,23 @@ namespace GeroOlanda.API.Controllers
         }
 
 
-        [HttpGet]
-        [SwaggerOperation("Consulta dados da pagina Home")]
-        public async Task<ActionResult<IList<HomeDTO>>> ConsultarDados(string idHome, decimal IdUsuario)
-        {
+        //[HttpGet]
+        //[SwaggerOperation("Consulta dados da pagina Home")]
+        //public async Task<ActionResult<IList<HomeDTO>>> ConsultarDados(string idHome, decimal IdUsuario)
+        //{
 
-            var response = await _homeService.ConsultarDadosPorIdUsuario(IdUsuario);
-            return Ok(response);
-        }
+        //    var response = await _homeService.ConsultarDadosPorIdUsuario(IdUsuario);
+        //    return Ok(response);
+        //}
 
         [HttpPost]
         [SwaggerOperation("Cadastrar Descricao")]
+        [SwaggerResponse(200, "", typeof(List<Home>))]
         public async Task<IActionResult> GravarDadosDescricao(string descricao)
         {
             var retorno =  _homeService.CadastrarUma(descricao);
            
+
             return Ok(retorno);
         }
 
