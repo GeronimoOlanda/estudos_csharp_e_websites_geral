@@ -27,10 +27,10 @@ namespace GeroOlanda.Domain.Repository.Impl
             throw new NotImplementedException();
         }
 
-        public string CadastrarUma(string Descricao)
+        public string CadastrarUma(string descricao)
         {
             var mennsagem = "";
-            if (Descricao == "teste")
+            if (descricao == "teste")
             {
                 mennsagem = "Bateu na service";
             }
@@ -51,6 +51,11 @@ namespace GeroOlanda.Domain.Repository.Impl
         public void SaveChanges()
         {
             _context.SaveChanges();
+        }
+
+        public ContatosDto GetDadosContato(string Id, string telefone)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -29,21 +29,20 @@ namespace GeroOlanda.Domain.Services.Impl
             throw new NotImplementedException();
         }
 
-        public string CadastrarUma(string Descricao)
+        public string CadastrarUma(string descricao)
         {
-            var cadastrando = "";
-            var message = "";
-            if (Descricao == null)
-            {
-                message = "Erro ao tentar acessar a repository";
-            }
-            else
-            {
-                message = _homeRepository.CadastrarUma(Descricao);
-            }
+            var cadastrando = _homeRepository.CadastrarUma(descricao);
+            
 
-            return message.ToString();
+            return cadastrando;
           
+        }
+
+        public async Task<ContatosDto> GetDadosContato(string Id, string telefone)
+        {
+            var getDados = _homeRepository.GetDadosContato(Id, telefone);
+
+            return getDados;
         }
     }
 }

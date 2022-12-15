@@ -12,7 +12,7 @@ namespace GeroOlanda.Domain.Services
     {
         Task<IList<HomeDTO>> ConsultarDadosPorIdUsuario(decimal IdUsuario);
 
-        public string CadastrarUma(string Descricao);
-
+        public string CadastrarUma(string descricao);
+        Task<ContatosDto> GetDadosContato(string Id, string telefone);
     }
 }
