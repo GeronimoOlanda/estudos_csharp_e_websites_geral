@@ -3,27 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consoles", "Consoles", "{E5A6D065-3299-4EF2-9C86-E5CDDFF9F868}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apis", "Apis", "{407D4770-EA27-4B92-9A6F-91DB29CDE214}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebSites", "WebSites", "{5484F6FA-6E9A-4811-8161-6A2A83EFAB6D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpAdvanced", "CSharpAdvanced\CSharpAdvanced.csproj", "{512A46D3-3BD5-4ECD-874B-F69B5F0E0768}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeroOlanda.API", "GeroOlanda.API\GeroOlanda.API.csproj", "{E725A644-CD55-46F0-9CFD-7B4AFB9F5137}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeroOlanda.Domain.Services", "GeroOlanda.Domain.Services\GeroOlanda.Domain.Services.csproj", "{5B93679E-12CE-45D2-80DC-F3152A610DA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeroOlanda.Domain.Services", "GeroOlanda.Domain.Services\GeroOlanda.Domain.Services.csproj", "{5B93679E-12CE-45D2-80DC-F3152A610DA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeroOlanda.Domain.Repository", "Geronimo.Domain.Repository\GeroOlanda.Domain.Repository.csproj", "{2839F5BF-3BBC-4481-B45D-984128DCB81C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeroOlanda.Domain.Repository", "Geronimo.Domain.Repository\GeroOlanda.Domain.Repository.csproj", "{2839F5BF-3BBC-4481-B45D-984128DCB81C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeroOlanda.Domain.Repository.Impl", "GeroOlanda.Domain.Repository.Impl\GeroOlanda.Domain.Repository.Impl.csproj", "{F93AA132-BA24-4442-8848-4B37C1C257C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeroOlanda.Domain.Repository.Impl", "GeroOlanda.Domain.Repository.Impl\GeroOlanda.Domain.Repository.Impl.csproj", "{F93AA132-BA24-4442-8848-4B37C1C257C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeroOlanda.Domain.Services.Impl", "GeroOlanda.Domain.Services.Impl\GeroOlanda.Domain.Services.Impl.csproj", "{AA50978D-D5E8-415A-8B69-B390E731D377}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeroOlanda.Domain.Services.Impl", "GeroOlanda.Domain.Services.Impl\GeroOlanda.Domain.Services.Impl.csproj", "{AA50978D-D5E8-415A-8B69-B390E731D377}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeroOlanda.Domain.Entities", "GeroOlanda.Domain.Entities\GeroOlanda.Domain.Entities.csproj", "{D48F02EB-41EE-42BA-96F2-BE707BBB5690}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeroOlanda.Domain.Entities", "GeroOlanda.Domain.Entities\GeroOlanda.Domain.Entities.csproj", "{D48F02EB-41EE-42BA-96F2-BE707BBB5690}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeroOlanda.Domain.UnitTests", "GeroOlanda.Domain.UnitTests\GeroOlanda.Domain.UnitTests.csproj", "{15ADF8A4-37D3-4532-85B6-34ACA98CC730}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeroOlanda.Domain.UnitTests", "GeroOlanda.Domain.UnitTests\GeroOlanda.Domain.UnitTests.csproj", "{15ADF8A4-37D3-4532-85B6-34ACA98CC730}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{512A46D3-3BD5-4ECD-874B-F69B5F0E0768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{512A46D3-3BD5-4ECD-874B-F69B5F0E0768}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{512A46D3-3BD5-4ECD-874B-F69B5F0E0768}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{512A46D3-3BD5-4ECD-874B-F69B5F0E0768}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E725A644-CD55-46F0-9CFD-7B4AFB9F5137}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E725A644-CD55-46F0-9CFD-7B4AFB9F5137}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E725A644-CD55-46F0-9CFD-7B4AFB9F5137}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -68,7 +58,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{512A46D3-3BD5-4ECD-874B-F69B5F0E0768} = {E5A6D065-3299-4EF2-9C86-E5CDDFF9F868}
 		{E725A644-CD55-46F0-9CFD-7B4AFB9F5137} = {407D4770-EA27-4B92-9A6F-91DB29CDE214}
 		{5B93679E-12CE-45D2-80DC-F3152A610DA6} = {407D4770-EA27-4B92-9A6F-91DB29CDE214}
 		{2839F5BF-3BBC-4481-B45D-984128DCB81C} = {407D4770-EA27-4B92-9A6F-91DB29CDE214}
