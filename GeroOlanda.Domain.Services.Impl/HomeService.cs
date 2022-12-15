@@ -37,12 +37,5 @@ namespace GeroOlanda.Domain.Services.Impl
             return cadastrando;
           
         }
-
-        public async Task<ContatosDto> GetDadosContato(string Id, string telefone)
-        {
-            var getDados = _homeRepository.GetDadosContato(Id, telefone);
-
-            return getDados;
-        }
     }
 }

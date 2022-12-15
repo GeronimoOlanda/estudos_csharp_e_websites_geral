@@ -10,7 +10,7 @@ namespace GeroOlanda.Domain.Entities
     {
         public int Id { get; set; }
 
-        [NotMapped]
+  
         public string Descricao { get; set; }
     }
 }
