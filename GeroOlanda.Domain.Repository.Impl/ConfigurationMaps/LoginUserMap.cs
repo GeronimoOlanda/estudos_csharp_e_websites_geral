@@ -21,7 +21,14 @@ namespace GeroOlanda.Domain.Repository.Impl.ConfigurationMaps
             builder.HasKey(x => x.Id_Usuario);
 
             //Atributos
-            //builder.Property(e => e.).IsRequired();
+            builder.Property(e => e.UserName).IsRequired();
+            builder.Property(e => e.LoginUser).IsRequired();
+            builder.Property(e => e.Password).IsRequired();
+            builder.Property(e => e.Created_At);
+            builder.Property(e => e.Updated_At).IsRequired();
+            builder.Property(e => e.Password_Encrypt).IsRequired();
+            builder.Property(e => e.flag_UserAlive).IsRequired();
+            builder.Property(e => e.flag_Setor).IsRequired();
 
 
         }
