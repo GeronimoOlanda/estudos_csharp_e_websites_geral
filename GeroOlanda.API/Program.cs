@@ -12,19 +12,21 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddMvc();
 
-//mapeando a services/repository
+//mapeando a repository
 builder.Services.Add(new ServiceDescriptor(typeof(IHomeService), new HomeService()));
 builder.Services.AddScoped<IHomeRepository, HomeRepository>();
 builder.Services.AddScoped<ILoginUserRepository, LoginUserRepository>();
 
-
+//mapeando a services
 builder.Services.AddScoped<IHomeService, HomeService>();
 builder.Services.AddScoped<ILoginUserService, LoginUserService>();
 
+//conectando a nossa connection string
 IConfigurationRoot configuration = new ConfigurationBuilder()
       .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
       .AddJsonFile("appsettings.json")
       .Build();
+//conectando a nossa connection string
 
 builder.Services.AddDbContext<GeroOlandaDbContext>(
  options => options.UseSqlServer(configuration.GetConnectionString("SQLServerDBContext"))

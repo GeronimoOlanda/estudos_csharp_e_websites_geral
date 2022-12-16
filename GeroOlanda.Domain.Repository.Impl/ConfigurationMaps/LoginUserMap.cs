@@ -11,9 +11,6 @@ namespace GeroOlanda.Domain.Repository.Impl.ConfigurationMaps
 {
     public class LoginUserMap : IEntityTypeConfiguration<UserLogin>
     {
-       
-        public const string NomeTabela = "Home";
-        public const string NomeColunaId = "id_home";
 
         public void Configure(EntityTypeBuilder<UserLogin> builder)
         {
