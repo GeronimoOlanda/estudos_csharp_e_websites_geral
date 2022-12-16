@@ -27,7 +27,7 @@ namespace GeroOlanda.Domain.Repository.Impl
         }
 
         public UserLogin CadastrarDadosLogin(UserLogin userLogin)
-        {
+        {   
             _context.Add(userLogin);
             _context.SaveChanges();
 
