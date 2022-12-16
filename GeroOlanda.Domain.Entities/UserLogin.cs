@@ -17,21 +17,11 @@ namespace GeroOlanda.Domain.Entities
         public string UserName { get; set; }
         public string LoginUser { get; set; }
         public string Password { get; set; }
-        public DateTime Created_At { 
-            get
-            {
-                return DateTime.Now;
-            }
-        }
-        public DateTime Updated_At
-        {
-            get
-            {
-                return DateTime.Now;
-            }
-        }
+        public DateTime Created_At { get; set; }
+        public DateTime Updated_At { get; set; }
         public string Password_Encrypt { get; set; }
         public string flag_UserAlive { get; set; }
+        public string flag_Setor { get; set; }
 
        
     }
