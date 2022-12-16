@@ -20,6 +20,7 @@ namespace GeroOlanda.API.Controllers
         }
 
         [HttpGet]
+        [SwaggerOperation("Consultar usuario cadastrado por Id")]
         public IActionResult ConsultarCadastroPorId(int id)
         {
             var response = _loginUserService.ConsultarCadastroPorId(id);
