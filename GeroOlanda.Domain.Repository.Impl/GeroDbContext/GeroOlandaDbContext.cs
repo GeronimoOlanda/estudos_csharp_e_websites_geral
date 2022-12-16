@@ -14,6 +14,7 @@ namespace GeroOlanda.Domain.Repository.Impl.GeroDbContext
     public class GeroOlandaDbContext : DbContext
     {
         public DbSet<Home> Home { get; set; }
+        public DbSet<UserLogin> UserLogin { get; set; }
 
         public GeroOlandaDbContext(DbContextOptions<GeroOlandaDbContext> options) : base(options) { }
 
