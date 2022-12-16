@@ -13,6 +13,9 @@ namespace GeroOlanda.Domain.Services
 
         UserLogin CadastrarDadosLogin(UserLogin userLogin);
 
+        UserLogin ConsultarCadastroPorId(int id);
+
+
 
     }
 }

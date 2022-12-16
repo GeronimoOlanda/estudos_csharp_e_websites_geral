@@ -19,6 +19,15 @@ namespace GeroOlanda.API.Controllers
             _loginUserService = loginUserService;
         }
 
+        [HttpGet]
+        public IActionResult ConsultarCadastroPorId(int id)
+        {
+            var response = _loginUserService.ConsultarCadastroPorId(id);
+
+            return Ok(response);
+
+        }
+
         [HttpPost]
         [SwaggerOperation("Cadastrar Descricao")]
         [SwaggerResponse(200, "", typeof(List<UserLogin>))]

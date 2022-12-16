@@ -13,5 +13,7 @@ namespace GeroOlanda.Domain.Repository
         void SaveChanges();
         UserLogin CadastrarDadosLogin(UserLogin userLogin);
 
+        UserLogin ConsultarCadastroPorId(int id);
+
     }
 }

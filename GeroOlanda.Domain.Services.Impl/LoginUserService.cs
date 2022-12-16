@@ -58,5 +58,12 @@ namespace GeroOlanda.Domain.Services.Impl
 
             return hashSenha;
         }
+
+        public UserLogin ConsultarCadastroPorId(int id)
+        {
+            var result = _loginUserRepository.ConsultarCadastroPorId(id);
+
+            return result;
+        }
     }
 }
