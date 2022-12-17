@@ -24,12 +24,7 @@ namespace GeroOlanda.API.Controllers
         public IActionResult GravarDadosDescricao(string descricao)
         {
             var retorno =  _homeService.CadastrarUma(descricao);
-           
-
             return Ok(retorno);
         }
-
-
-
     }
 }
