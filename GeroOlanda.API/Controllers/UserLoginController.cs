@@ -11,7 +11,6 @@ namespace GeroOlanda.API.Controllers
     [Route("api/[controller]")]
     public class UserLoginController : ControllerBase
     {
-        //private readonly IHomeService _homeService;
         private readonly ILoginUserService _loginUserService;
 
         public UserLoginController(ILoginUserService loginUserService)
@@ -24,7 +23,6 @@ namespace GeroOlanda.API.Controllers
         public IActionResult ConsultarCadastroPorId(int id)
         {
             var response = _loginUserService.ConsultarCadastroPorId(id);
-
             return Ok(response);
 
         }
@@ -34,9 +32,7 @@ namespace GeroOlanda.API.Controllers
         [SwaggerResponse(200, "", typeof(List<UserLogin>))]
         public IActionResult CadastrarDadosLogin([FromBody]UserLogin userLogin)
         {
-         
            var dadoslogin = _loginUserService.CadastrarDadosLogin(userLogin);
-
             return Ok(dadoslogin);
         }
 
