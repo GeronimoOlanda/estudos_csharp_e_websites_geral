@@ -20,6 +20,7 @@ builder.Services.AddScoped<ILoginUserRepository, LoginUserRepository>();
 //mapeando a services
 builder.Services.AddScoped<IHomeService, HomeService>();
 builder.Services.AddScoped<ILoginUserService, LoginUserService>();
+builder.Services.AddScoped<IGraficoService, GraficoService>();
 
 //conectando a nossa connection string
 IConfigurationRoot configuration = new ConfigurationBuilder()
