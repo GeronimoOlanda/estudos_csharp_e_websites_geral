@@ -15,6 +15,7 @@ namespace GeroOlanda.Domain.Entities.Dtos
         public string QtdElementos { get; set; }
         public string EixoX { get; set; }
         public string DescricaoEixoX { get; set; }
+        public string EixoY { get; set; }
         public string DescricaoEixoY { get; set; }
         
         public string Descricao { get; set; }
