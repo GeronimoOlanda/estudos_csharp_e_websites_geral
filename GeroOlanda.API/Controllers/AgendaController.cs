@@ -3,6 +3,7 @@ using GeroOlanda.Domain.Entities;
 using GeroOlanda.Domain.Entities.Dtos;
 using GeroOlanda.Domain.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.WebEncoders.Testing;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace GeroOlanda.API.Controllers
@@ -11,20 +12,19 @@ namespace GeroOlanda.API.Controllers
     [Route("api/[controller]")]
     public class AgendaController : ControllerBase
     {
-        private readonly IHomeService _homeService;
+        private readonly IAgendaService _agendaService;
 
-        public AgendaController(IHomeService homeService)
+        public AgendaController(IAgendaService agendaService)
         {
-            _homeService = homeService;
+            _agendaService = agendaService;
         }
 
         [HttpPost]
-        [SwaggerOperation("Cadastrar Descricao")]
-        [SwaggerResponse(200, "", typeof(List<Home>))]
-        public IActionResult GravarDadosDescricao(string descricao)
+        [SwaggerOperation("Cadastrar dados Agenda")]
+        [SwaggerResponse(200, "", typeof(List<AgendaDTO>))]
+        public AgendaDTO CriarDadosAgenda([FromBody]AgendaDTO agendaDTO)
         {
-            var retorno =  _homeService.CadastrarUma(descricao);
-            return Ok(retorno);
+            return null;
         }
     }
 }
