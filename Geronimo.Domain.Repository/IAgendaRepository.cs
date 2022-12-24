@@ -11,7 +11,7 @@ namespace GeroOlanda.Domain.Repository
     public interface IAgendaRepository
     {
         AgendaDTO CriarDadosAgenda(AgendaDTO agendaDTO);
-        IList<AgendaDTO> ConsultarDadosAgenda(AgendaDTO consultarAgenda);
+        IList<AgendaDTO> ConsultarDadosAgenda(int idIntervencao, string Descricao);
         void SaveChanges();
 
     }
