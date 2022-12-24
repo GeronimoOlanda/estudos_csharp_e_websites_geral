@@ -11,6 +11,6 @@ namespace GeroOlanda.Domain.Services
     public interface IAgendaService
     {
         AgendaDTO CriarDadosAgenda(AgendaDTO agendaDTO);
-        IList<AgendaDTO> ConsultarDadosAgenda(AgendaDTO consultarAgenda);
+        IList<AgendaDTO> ConsultarDadosAgenda(int idIntervencao, string Descricao);
     }
 }
