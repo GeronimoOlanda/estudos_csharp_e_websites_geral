@@ -24,7 +24,9 @@ namespace GeroOlanda.Domain.Services.Impl
 
         public AgendaDTO CriarDadosAgenda(AgendaDTO agendaDTO)
         {
-            throw new NotImplementedException();
+            var response = _agendaRepository.CriarDadosAgenda(agendaDTO);
+
+            return response;
         }
     }
 }
