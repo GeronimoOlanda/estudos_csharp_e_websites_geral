@@ -17,9 +17,10 @@ namespace GeroOlanda.Domain.Services.Impl
             _agendaRepository = agendaRepository;
         }
 
-        public IList<AgendaDTO> ConsultarDadosAgenda(AgendaDTO consultarAgenda)
+        public IList<AgendaDTO> ConsultarDadosAgenda(int idIntervencao, string Descricao)
         {
-            throw new NotImplementedException();
+            var response = _agendaRepository.ConsultarDadosAgenda(idIntervencao, Descricao);
+            return response;
         }
 
         public AgendaDTO CriarDadosAgenda(AgendaDTO agendaDTO)
