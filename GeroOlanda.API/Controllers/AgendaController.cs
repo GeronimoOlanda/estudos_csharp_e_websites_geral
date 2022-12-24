@@ -27,5 +27,14 @@ namespace GeroOlanda.API.Controllers
             var response = _agendaService.CriarDadosAgenda(agendaDTO);
             return response;
         }
+
+        [HttpGet]
+        [SwaggerOperation("Consultar dados da Base")]
+        public IList<AgendaDTO> ConsultarDadosAgenda(int idIntervencao, string Descricao)
+        {
+            var response = _agendaService.ConsultarDadosAgenda(idIntervencao, Descricao);
+
+            return response;
+        }
     }
 }
