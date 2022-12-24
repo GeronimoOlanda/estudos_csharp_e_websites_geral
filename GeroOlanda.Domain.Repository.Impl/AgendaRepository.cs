@@ -32,39 +32,51 @@ namespace GeroOlanda.Domain.Repository.Impl
                 Observacoes = agendaDTO.Observacoes,
                 Detalhes = agendaDTO.Detalhes,
                 flagExibir = agendaDTO.flagExibir
-
             };
-
-
             _context.Add(agenda);
             _context.SaveChanges();
             return agendaDTO;
         }
-
-        public void SaveChanges()
-        {
-            throw new NotImplementedException();
-        }
-
         public IList<AgendaDTO> ConsultarDadosAgenda(int idIntervencao, string Descricao)
         {
             IList<AgendaDTO> agendaDTO = new List<AgendaDTO>();
             var result = _context.Agenda.AsQueryable().Where(e => e.Id_Agenda == idIntervencao).ToList();
-          
+            var queryListaDados = RangeDados(result);
 
-            foreach(var item in result)
+            return queryListaDados;
+        }
+
+        public IList<AgendaDTO> RetornoDadosFlag(string flag)
+        {
+            IList<AgendaDTO> agendaDTO = new List<AgendaDTO>();
+            var result = _context.Agenda.AsQueryable().Where(e => e.flagExibir == flag).ToList();
+            var queryListaDados = RangeDados(result);
+            return queryListaDados;
+        }
+
+        private IList<AgendaDTO> RangeDados(IList<Agenda> agenda)
+        {
+            IList<AgendaDTO> agendaDTO = new List<AgendaDTO>();
+
+            foreach (var item in agenda)
             {
-                foreach(var agendaItem in agendaDTO)
+                if (item != null)
                 {
-                    agendaItem.Id_Agenda = item.Id_Agenda;
-                    agendaItem.Titulo = item.Titulo;
-                    agendaItem.Descricao = item.Descricao;
-                    agendaItem.Detalhes = item.Detalhes;
-                    agendaItem.flagExibir = item.Detalhes;
-                    agendaItem.Observacoes = item.Observacoes;
+                    foreach (var agendaItem in agendaDTO)
+                    {
+                        agendaItem.Id_Agenda = item.Id_Agenda;
+                        agendaItem.Titulo = item.Titulo;
+                        agendaItem.Descricao = item.Descricao;
+                        agendaItem.Detalhes = item.Detalhes;
+                        agendaItem.flagExibir = item.Detalhes;
+                        agendaItem.Observacoes = item.Observacoes;
+                        agendaDTO.Add(agendaItem);
+
+                    }
                 }
 
             }
+
             return agendaDTO;
         }
     }
