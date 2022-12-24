@@ -16,11 +16,13 @@ builder.Services.AddMvc();
 builder.Services.Add(new ServiceDescriptor(typeof(IHomeService), new HomeService()));
 builder.Services.AddScoped<IHomeRepository, HomeRepository>();
 builder.Services.AddScoped<ILoginUserRepository, LoginUserRepository>();
+builder.Services.AddScoped<IAgendaRepository, AgendaRepository>();
 
 //mapeando a services
 builder.Services.AddScoped<IHomeService, HomeService>();
 builder.Services.AddScoped<ILoginUserService, LoginUserService>();
 builder.Services.AddScoped<IGraficoService, GraficoService>();
+builder.Services.AddScoped<IAgendaService, AgendaService>();
 
 //conectando a nossa connection string
 IConfigurationRoot configuration = new ConfigurationBuilder()
