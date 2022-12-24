@@ -12,6 +12,7 @@ namespace GeroOlanda.Domain.Repository
     {
         AgendaDTO CriarDadosAgenda(AgendaDTO agendaDTO);
         IList<AgendaDTO> ConsultarDadosAgenda(AgendaDTO consultarAgenda);
+        void SaveChanges();
 
     }
 }
