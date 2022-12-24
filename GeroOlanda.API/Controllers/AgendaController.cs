@@ -24,7 +24,8 @@ namespace GeroOlanda.API.Controllers
         [SwaggerResponse(200, "", typeof(List<AgendaDTO>))]
         public AgendaDTO CriarDadosAgenda([FromBody]AgendaDTO agendaDTO)
         {
-            return null;
+            var response = _agendaService.CriarDadosAgenda(agendaDTO);
+            return response;
         }
     }
 }
