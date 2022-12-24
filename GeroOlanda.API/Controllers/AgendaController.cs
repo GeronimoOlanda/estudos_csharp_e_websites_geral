@@ -3,6 +3,7 @@ using GeroOlanda.Domain.Entities;
 using GeroOlanda.Domain.Entities.Dtos;
 using GeroOlanda.Domain.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.WebEncoders.Testing;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -28,13 +29,23 @@ namespace GeroOlanda.API.Controllers
             return response;
         }
 
+        //[HttpGet]
+        //[SwaggerOperation("Consultar dados da Base")]
+        //public IList<AgendaDTO> ConsultarDadosAgenda(int idIntervencao, string Descricao)
+        //{
+        //    var response = _agendaService.ConsultarDadosAgenda(idIntervencao, Descricao);
+
+        //    return response;
+        //}
+
         [HttpGet]
-        [SwaggerOperation("Consultar dados da Base")]
-        public IList<AgendaDTO> ConsultarDadosAgenda(int idIntervencao, string Descricao)
+        [SwaggerOperation("Retornando dados da agenda com a flag ativa ou não")]
+        public IList<AgendaDTO> RetornoDadosFlag(string flag)
         {
-            var response = _agendaService.ConsultarDadosAgenda(idIntervencao, Descricao);
+            var response = _agendaService.RetornoDadosFlag(flag);
 
             return response;
+
         }
     }
 }
