@@ -41,14 +41,31 @@ namespace GeroOlanda.Domain.Repository.Impl
             return agendaDTO;
         }
 
-        public IList<AgendaDTO> ConsultarDadosAgenda(AgendaDTO consultarAgenda)
+        public void SaveChanges()
         {
             throw new NotImplementedException();
         }
 
-        public void SaveChanges()
+        public IList<AgendaDTO> ConsultarDadosAgenda(int idIntervencao, string Descricao)
         {
-            throw new NotImplementedException();
+            IList<AgendaDTO> agendaDTO = new List<AgendaDTO>();
+            var result = _context.Agenda.AsQueryable().Where(e => e.Id_Agenda == idIntervencao).ToList();
+          
+
+            foreach(var item in result)
+            {
+                foreach(var agendaItem in agendaDTO)
+                {
+                    agendaItem.Id_Agenda = item.Id_Agenda;
+                    agendaItem.Titulo = item.Titulo;
+                    agendaItem.Descricao = item.Descricao;
+                    agendaItem.Detalhes = item.Detalhes;
+                    agendaItem.flagExibir = item.Detalhes;
+                    agendaItem.Observacoes = item.Observacoes;
+                }
+
+            }
+            return agendaDTO;
         }
     }
 }
