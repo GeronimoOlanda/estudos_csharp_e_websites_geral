@@ -24,10 +24,29 @@ namespace GeroOlanda.Domain.Repository.Impl
 
         public AgendaDTO CriarDadosAgenda(AgendaDTO agendaDTO)
         {
-            throw new NotImplementedException();
+            Agenda agenda = new Agenda
+            {
+                Id_Agenda = agendaDTO.Id_Agenda,
+                Titulo = agendaDTO.Titulo,
+                Descricao = agendaDTO.Descricao,
+                Observacoes = agendaDTO.Observacoes,
+                Detalhes = agendaDTO.Detalhes,
+                flagExibir = agendaDTO.flagExibir
+
+            };
+
+
+            _context.Add(agenda);
+            _context.SaveChanges();
+            return agendaDTO;
         }
 
         public IList<AgendaDTO> ConsultarDadosAgenda(AgendaDTO consultarAgenda)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveChanges()
         {
             throw new NotImplementedException();
         }
