@@ -29,5 +29,12 @@ namespace GeroOlanda.Domain.Services.Impl
 
             return response;
         }
+
+        public IList<AgendaDTO> RetornoDadosFlag(string flag)
+        {
+            var response = _agendaRepository.RetornoDadosFlag(flag);
+
+            return response;
+        }
     }
 }
