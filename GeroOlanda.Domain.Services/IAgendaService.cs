@@ -13,5 +13,7 @@ namespace GeroOlanda.Domain.Services
         AgendaDTO CriarDadosAgenda(AgendaDTO agendaDTO);
         IList<AgendaDTO> ConsultarDadosAgenda(int idIntervencao, string Descricao);
         IList<AgendaDTO> RetornoDadosFlag(string flag);
+
+        string RemoveDaBase(int idUsuario);
     }
 }
