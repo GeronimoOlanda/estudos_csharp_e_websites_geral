@@ -29,15 +29,6 @@ namespace GeroOlanda.API.Controllers
             return response;
         }
 
-        //[HttpGet]
-        //[SwaggerOperation("Consultar dados da Base")]
-        //public IList<AgendaDTO> ConsultarDadosAgenda(int idIntervencao, string Descricao)
-        //{
-        //    var response = _agendaService.ConsultarDadosAgenda(idIntervencao, Descricao);
-
-        //    return response;
-        //}
-
         [HttpGet]
         [SwaggerOperation("Retornando dados da agenda com a flag ativa ou não")]
         public IList<AgendaDTO> RetornoDadosFlag(string flag)
@@ -46,6 +37,13 @@ namespace GeroOlanda.API.Controllers
 
             return response;
 
+        }
+
+        [HttpDelete]
+        public IActionResult RemoveDaBase(int idUsuario)
+        {
+            var response = _agendaService.RemoveDaBase(idUsuario);
+            return Ok(response);
         }
     }
 }
