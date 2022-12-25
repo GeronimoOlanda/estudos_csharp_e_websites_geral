@@ -30,6 +30,11 @@ namespace GeroOlanda.Domain.Services.Impl
             return response;
         }
 
+        public string RemoveDaBase(int idUsuario)
+        {
+            throw new NotImplementedException();
+        }
+
         public IList<AgendaDTO> RetornoDadosFlag(string flag)
         {
             var response = _agendaRepository.RetornoDadosFlag(flag);
