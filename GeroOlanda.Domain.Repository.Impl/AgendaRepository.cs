@@ -79,5 +79,10 @@ namespace GeroOlanda.Domain.Repository.Impl
 
             return agendaDTO;
         }
+        //Remove um usuario especifico da base.
+        public string RemoveDaBase(int idUsuario)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
