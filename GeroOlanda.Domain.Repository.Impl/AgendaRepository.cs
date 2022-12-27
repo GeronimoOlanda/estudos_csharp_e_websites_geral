@@ -82,7 +82,12 @@ namespace GeroOlanda.Domain.Repository.Impl
         //Remove um usuario especifico da base.
         public string RemoveDaBase(int idUsuario)
         {
-            throw new NotImplementedException();
+            var result = _context.Agenda.Where(e => e.Id_Agenda == idUsuario).FirstOrDefault();
+            _context.Agenda.Attach(result);
+            _context.Agenda.Remove(result);
+            _context.SaveChanges();
+
+            return result.ToString();
         }
     }
 }
