@@ -32,7 +32,9 @@ namespace GeroOlanda.Domain.Services.Impl
 
         public string RemoveDaBase(int idUsuario)
         {
-            throw new NotImplementedException();
+            var response = _agendaRepository.RemoveDaBase(idUsuario);
+
+            return response;
         }
 
         public IList<AgendaDTO> RetornoDadosFlag(string flag)
