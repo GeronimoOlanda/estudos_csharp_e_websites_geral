@@ -31,9 +31,9 @@ namespace GeroOlanda.API.Controllers
 
         [HttpGet]
         [SwaggerOperation("Retornando dados da agenda com a flag ativa ou não")]
-        public IList<AgendaDTO> RetornoDadosFlag(string flag)
+        public IList<AgendaDTO> RetornoDados(int idUsuario)
         {
-            var response = _agendaService.RetornoDadosFlag(flag);
+            var response = _agendaService.RetornoDados(idUsuario);
 
             return response;
 
