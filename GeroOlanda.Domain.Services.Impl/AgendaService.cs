@@ -37,9 +37,9 @@ namespace GeroOlanda.Domain.Services.Impl
             return response;
         }
 
-        public IList<AgendaDTO> RetornoDadosFlag(string flag)
+        public IList<AgendaDTO> RetornoDados(int idUsuario)
         {
-            var response = _agendaRepository.RetornoDadosFlag(flag);
+            var response = _agendaRepository.RetornoDados(idUsuario);
 
             return response;
         }
