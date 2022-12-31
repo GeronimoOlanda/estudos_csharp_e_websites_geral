@@ -46,10 +46,10 @@ namespace GeroOlanda.Domain.Repository.Impl
             return queryListaDados;
         }
 
-        public IList<AgendaDTO> RetornoDadosFlag(string flag)
+        public IList<AgendaDTO> RetornoDados(int idUsuario)
         {
             IList<AgendaDTO> agendaDTO = new List<AgendaDTO>();
-            var result = _context.Agenda.AsQueryable().Where(e => e.flagExibir == flag).ToList();
+            var result = _context.Agenda.AsQueryable().Where(e => e.Id_Agenda == idUsuario).ToList();
             var queryListaDados = RangeDados(result);
             return queryListaDados;
         }
