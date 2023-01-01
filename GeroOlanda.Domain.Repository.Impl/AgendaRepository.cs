@@ -53,31 +53,23 @@ namespace GeroOlanda.Domain.Repository.Impl
             var queryListaDados = RangeDados(result);
             return queryListaDados;
         }
-
-        private IList<AgendaDTO> RangeDados(IList<Agenda> agenda)
+        private IList<AgendaDTO> RangeDados(IList<Agenda> dtoList)
         {
-            IList<AgendaDTO> agendaDTO = new List<AgendaDTO>();
-
-            foreach (var item in agenda)
+            AgendaDTO agendaDTO = new AgendaDTO();
+            IList<AgendaDTO> ExibicaoAgendaDTO = new List<AgendaDTO>();
+            foreach (var itemAgenda in dtoList )
             {
-                if (item != null)
-                {
-                    foreach (var agendaItem in agendaDTO)
-                    {
-                        agendaItem.Id_Agenda = item.Id_Agenda;
-                        agendaItem.Titulo = item.Titulo;
-                        agendaItem.Descricao = item.Descricao;
-                        agendaItem.Detalhes = item.Detalhes;
-                        agendaItem.flagExibir = item.Detalhes;
-                        agendaItem.Observacoes = item.Observacoes;
-                        agendaDTO.Add(agendaItem);
 
-                    }
-                }
-
+                agendaDTO.Id_Agenda = itemAgenda.Id_Agenda;
+                agendaDTO.Titulo = itemAgenda.Titulo;
+                agendaDTO.Descricao = itemAgenda.Descricao;
+                agendaDTO.Observacoes = itemAgenda.Observacoes;
+                agendaDTO.Detalhes = itemAgenda.Detalhes;
+                agendaDTO.flagExibir = itemAgenda.flagExibir;
+                ExibicaoAgendaDTO.Add(agendaDTO);
             }
 
-            return agendaDTO;
+            return ExibicaoAgendaDTO;
         }
         //Remove um usuario especifico da base.
         public string RemoveDaBase(int idUsuario)
