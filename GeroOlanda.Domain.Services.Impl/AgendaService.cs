@@ -40,7 +40,7 @@ namespace GeroOlanda.Domain.Services.Impl
         public IList<AgendaDTO> RetornoDados(int idUsuario)
         {
             var response = _agendaRepository.RetornoDados(idUsuario);
-
+            //god bless you
             return response;
         }
     }
