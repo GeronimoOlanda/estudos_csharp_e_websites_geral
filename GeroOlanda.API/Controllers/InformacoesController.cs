@@ -9,6 +9,8 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace GeroOlanda.API.Controllers
 {
+
+
     [ApiController]
     [Route("api/[controller]")]
     public class InformacoesController : ControllerBase
