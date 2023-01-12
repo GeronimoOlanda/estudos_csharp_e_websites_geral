@@ -8,11 +8,11 @@ namespace GeroOlanda.Domain.Entities.Dtos
 {
     public class InformacoesDTO
     {
-        public int Id_Agenda { get; set; }
-        public string Titulo { get; set; }
-        public string Descricao { get; set; }
-        public string Observacoes { get; set; }
-        public string Detalhes { get; set; }
-        public string flagExibir { get; set; }
+        public int IfFormulario { get; set; }
+        public string Email { get; set; }
+        public string CPF { get; set; }
+        public DateTime DataNascimento { get; set; }
+       
+        public EnderecoDTO Enderecos { get; set; }
     }
 }
