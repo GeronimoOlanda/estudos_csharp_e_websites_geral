@@ -23,6 +23,7 @@ namespace GeroOlanda.Domain.Repository.Impl
         }
         public InformacoesDTO CadastrarInformacoes(InformacoesDTO informacoesDTO)
         {
+            //implementacao do metodo que vai cadastrar as informações na base.
             throw new NotImplementedException();
         }
     }
