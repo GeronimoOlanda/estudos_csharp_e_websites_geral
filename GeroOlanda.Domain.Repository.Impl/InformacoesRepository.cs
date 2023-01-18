@@ -19,7 +19,7 @@ namespace GeroOlanda.Domain.Repository.Impl
         }
         public InformacoesRepository()
         {
-
+            // inicialização do constructor vazio.
         }
         public InformacoesDTO CadastrarInformacoes(InformacoesDTO informacoesDTO)
         {
