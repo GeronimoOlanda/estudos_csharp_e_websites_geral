@@ -16,6 +16,7 @@ namespace GeroOlanda.Domain.Repository.Impl.GeroDbContext
         public DbSet<Home> Home { get; set; }
         public DbSet<UserLogin> UserLogin { get; set; }
         public DbSet<Agenda> Agenda { get; set; }
+        public DbSet<AreaTrabalho> AreaTrabalho { get; set; }
 
         public GeroOlandaDbContext(DbContextOptions<GeroOlandaDbContext> options) : base(options) { }
 
@@ -34,6 +35,7 @@ namespace GeroOlanda.Domain.Repository.Impl.GeroDbContext
             builder.ApplyConfiguration(new HomeMap());
             builder.ApplyConfiguration(new LoginUserMap());
             builder.ApplyConfiguration(new AgendaMap());
+            builder.ApplyConfiguration(new AreaTrabalhoMap());
             
 
         }

@@ -6,10 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GeroOlanda.Domain.Services
+namespace GeroOlanda.Domain.Repository
 {
-    public interface IAreaTrabalhoService
+    public interface IAreaTrabalhoRepository
     {
-       AreaTrabalhoDTO AreaTrabalhoDetalhes(AreaTrabalhoDTO AreaTrabalho);
+        void SaveChanges();
+        AreaTrabalhoDTO AreaTrabalhoDetalhes(AreaTrabalhoDTO AreaTrabalho);
+
     }
 }

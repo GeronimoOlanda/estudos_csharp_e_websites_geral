@@ -22,7 +22,7 @@ namespace GeroOlanda.API.Controllers.AreaTrabalho
         [HttpPost]
         [SwaggerOperation("Cadastrar Detalhes Area de Trabalho")]
         [SwaggerResponse(200, "", typeof(List<AreaTrabalhoDTO>))]
-        public IList<AreaTrabalhoDTO> AreaTrabalhoDetalhes([FromBody] IList<AreaTrabalhoDTO> AreaTrabalho)
+        public AreaTrabalhoDTO AreaTrabalhoDetalhes([FromBody] AreaTrabalhoDTO AreaTrabalho)
         {
             var response = _areaTrabalhoService.AreaTrabalhoDetalhes(AreaTrabalho);
             return response;

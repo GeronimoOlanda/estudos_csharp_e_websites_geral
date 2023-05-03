@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GeroOlanda.Domain.Entities.Dtos
+namespace GeroOlanda.Domain.Entities
 {
-    public class AreaTrabalhoDTO
+    public class AreaTrabalho
     {
         public int Id { get; set; }
         public string Width { get; set; }
@@ -16,9 +16,5 @@ namespace GeroOlanda.Domain.Entities.Dtos
         public string Type { get; set; }
         public string Background { get; set; }
         public string ImageUrl { get; set; } = string.Empty;
-        
-
-       
-
     }
 }
